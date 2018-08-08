@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="menu">
+      <div class="menu-left">
+        <a href="/">
+          <img src="<%-theme.favicon%>"></img>
+        </a>
+      </div>
+      <div class="menu-right">
+        <% Object.keys(theme.menu).forEach(function(key) { %>
+          <a href="<%=theme.menu[key]%>"><%=key%></a>
+        <% }); %>
+      </div>
+    </div>
+</div>

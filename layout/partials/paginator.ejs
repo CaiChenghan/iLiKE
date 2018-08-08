@@ -1,0 +1,34 @@
+<%
+var currentPage = page.current;
+var totalPage = page.total;
+var startPage = currentPage - 5 >= 1 ? currentPage - 5 : 1;
+var endPage = currentPage + 4 <= totalPage ? currentPage + 4 : totalPage;
+var prevLink = currentPage - 1 > 1 ? "/page/" + (currentPage - 1) : "/";
+var nextLink =  currentPage + 1 > 1 ? "/page/" + (currentPage + 1) : "/";
+%>
+<div class="pagenator">
+    <!--- 上一页 --->
+    <% if (currentPage == 0 || currentPage == 1) { %>
+        <a class="extend prev-none">上一页</a>
+    <% } %>
+    <% if (currentPage > 1) { %>
+        <a class="extend prev" href="<%=prevLink%>">上一页</a>
+    <% } %>
+
+    <!--- 中间页 --->
+    <% for (var i=startPage; i <= endPage; i++) { %>
+        <% if (i == currentPage) { %>
+            <span class="extend page-item page-item-select"><%=i%></span>
+        <% } %>
+        <% if (i != currentPage) { var pageUrl = (i > 1 ? "/page/" + i : "/") %>
+            <a class="extend page-item page-item-normal" href="<%=pageUrl%>"><%=i%></a>
+        <% } %>
+    <% } %>
+    <!--- 下一页 --->
+    <% if (currentPage == totalPage) { %>
+        <a class="extend next-none">下一页</a>
+    <% } %>
+    <% if (currentPage < totalPage) { %>
+        <a class="extend next" href="<%=nextLink%>">下一页</a>
+    <% } %>
+</div>

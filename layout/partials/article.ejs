@@ -1,0 +1,42 @@
+
+<%
+var subLength = 150;
+if (theme.auto_excerpt) {
+  if (theme.auto_excerpt.enable == true && theme.auto_excerpt.length > 0) {
+      subLength = theme.auto_excerpt.length;
+  }
+}
+var pageNum = 10;
+if (config.index_generator.per_page) {
+  pageNum = config.index_generator.per_page;
+}
+var order = date;
+if (config.index_generator.order_by) {
+  order = config.index_generator.order_by;
+}
+%>
+<% if (page.posts.length > 0) { %>
+  <div class="article">
+    <% page.posts.sort('order', -1).limit(pageNum).each(function(post) { %>
+      <div class="article-item">
+        <h2 class="article-item-header">
+          <a href="<%=config.root + post.path%>">
+            <%=post.title%>
+          </a>
+        </h2>
+        <div class="article-item-content">
+          <% if (post.content) { var content=post.content; var reg=/<[^>]+>/gim; var text=content.replace(reg,""); text = text.substr(0,subLength) + "..."; %>
+            <p><%=text%></p>
+          <% } %>
+        </div>
+        <div class="atricle-item-time">
+          <% if (post.date) { %>
+            <span>
+              <%=date(post.date)%>
+            </span>
+          <% } %>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+<% } %>

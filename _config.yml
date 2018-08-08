@@ -1,0 +1,35 @@
+
+# html lang
+language: zh-CN
+
+# main menu navigation
+menu:
+  Home: /
+  Archives: /archives
+  About: /about
+
+# social
+social:
+  weibo: 
+  github: https://github.com/CaiChenghan
+  stack_overflow:
+  facebook:
+  twitter: 
+  google_plus: 
+  instagram: 
+
+# Miscelaneous
+favicon: /favicon.ico
+
+# stylesheets loaded in the <head>
+stylesheets:
+- /css/iLiKE.css
+
+# scripts loaded in the end of the body
+scripts:
+- /js/iLiKE.js
+
+#
+auto_excerpt:
+  enable: true
+  length: 150

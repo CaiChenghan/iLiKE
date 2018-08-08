@@ -1,0 +1,147 @@
+@import "header"
+@import "footer"
+@import "pagenator"
+@import "archives"
+@import "heighlight"
+
+/**********文章列表**********/
+.article {
+    margin: 30px auto 30px;
+}
+
+.article-item {
+    border-bottom: 1px solid #f0f0f0;
+    margin: 0 auto 20px;
+    padding-bottom: 15px;
+}
+
+.article-item a {
+    font-size:21px;
+    font-weight:700;
+    line-height:1.5;
+}
+
+.article-item a:link {
+    color: #333333;
+}
+
+.article-item a:hover {
+    text-decoration: underline;
+}
+
+.article-item a:visited {
+    color: #969696;
+}
+
+.article-item-content p {
+    color: #999999;
+    font-size: 14px;
+    line-height: 25px;
+    margin: 0 auto 8px;
+}
+
+.atricle-item-time span {
+    color: #b4b4b4;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+/**********文章内容**********/
+.post {
+    width: 100%;
+}
+
+.post-title {
+    padding: 24px 0 20px;   
+}
+
+.post ul {
+    margin: 10px 5px 20px 25px;
+}
+
+.post img {
+    width: 80%;
+}
+
+
+
+.container {
+    margin: 0 auto 0;
+}
+
+/********** 通用控制 **********/
+body, a, p, ul, li, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0
+}
+
+a {
+	color: #333333;
+    text-decoration: none;
+}
+
+p {
+    color: #2f2f2f;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+span {
+	color: #333333;
+	font-size: 14px;
+}
+
+img {
+    width: 100%;
+}
+
+/********** MarkDown **********/
+blockquote {
+    border-left: 0.25em solid #dfe2e5;
+    padding: 20px;
+    color: #b4b4b4;
+    background-color: #f7f7f7;
+    margin: 0 0 6px 0;
+}
+
+blockquote p {
+    font-size: 17px;
+}
+
+/********** 媒体查询 **********/
+
+@media only screen and (min-width:1200px) {
+    .container {
+        width: 930px;
+        min-height: 650px;
+    }
+}
+
+@media only screen and (max-width:1200px) {
+    .container {
+        width: 930px;
+        min-height: 600px;
+    }
+}
+
+@media only screen and (max-width:979px) {
+    .container {
+        width: 710px;
+        min-height: 550px;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .container {
+        width: 85%;
+        min-height: 500px;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .container {
+        width: 85%;
+        min-height: 450px;
+    }
+}
