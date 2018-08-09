@@ -2,12 +2,27 @@
     <%- partial('partials/social', {}) %>
     <div class="copyright">
         <span>
-            © iLiKE Theme 2018
+            <% var author = "iLiKE Theme"; if (config.author) { author = config.author %>
+            <% } %>
+            <% if (theme.since) { 
+                var start = theme.since;
+                var end = date(Date.now(),'YYYY'); 
+                var cpTime = end
+                if (start < end) {
+                    cpTime = start + "~" + end;
+                }
+            %>
+                © <%= author%> <%= cpTime%>
+            <% } else { 
+                var end = date(Date.now(),'YYYY');
+            %>
+                © <%= author%> <%= end%>
+            <% } %>
         </span>
     </div>
     <div class="power">
         <span>
-            Powered by <a href="">Hexo</a> & <a href="">iLiKE Theme</a>
+            Powered by <a href="https://hexo.io">Hexo</a> & <a href="https://github.com/CaiChenghan/iLiKE">iLiKE Theme</a>
         </span>
     </div>
 </div>

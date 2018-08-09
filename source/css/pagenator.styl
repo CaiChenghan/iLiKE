@@ -1,7 +1,22 @@
 /**********分页器**********/
 .pagenator {
     overflow: auto;
-    margin: 20px 0 20px;
+    margin: 20px auto 20px;
+}
+
+.post-pagenator {
+    max-width: 600px;
+}
+
+.post-pagenator p {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    font-weight: 600;
+    color: #888888;
+    cursor: default;
 }
 
 .extend {
@@ -20,6 +35,10 @@
     cursor: pointer;
 }
 
+.prev {
+    float: left;
+}
+
 .prev-none {
     color: #888888;
     cursor: not-allowed;
@@ -28,6 +47,10 @@
 .next {
     color: #888888;
     cursor: pointer;
+}
+
+.post-next {
+    float:right;
 }
 
 .next-none {

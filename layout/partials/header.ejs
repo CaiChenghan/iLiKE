@@ -6,8 +6,18 @@
         </a>
       </div>
       <div class="menu-right">
-        <% Object.keys(theme.menu).forEach(function(key) { %>
-          <a href="<%=theme.menu[key]%>"><%=key%></a>
+        <% Object.keys(theme.menu).forEach(function(key) { var title = key %>
+          <% if (key == "Home") { title = _p('menu.home') %>
+          <% } %>
+          <% if (key == "Archives") { title = _p('menu.archives') %>
+          <% } %>
+          <% if (key == "Tags") { title = _p('menu.tags') %>
+          <% } %>
+          <% if (key == "Categories") { title = _p('menu.categories') %>
+          <% } %>
+          <% if (key == "About") { title = _p('menu.about') %>
+          <% } %>
+          <a href="<%=theme.menu[key]%>"><%=title%></a>
         <% }); %>
       </div>
     </div>

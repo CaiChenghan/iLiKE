@@ -1,18 +1,19 @@
-<%
-var currentPage = page.current;
-var totalPage = page.total;
-var startPage = currentPage - 5 >= 1 ? currentPage - 5 : 1;
-var endPage = currentPage + 4 <= totalPage ? currentPage + 4 : totalPage;
-var prevLink = currentPage - 1 > 1 ? "/page/" + (currentPage - 1) : "/";
-var nextLink =  currentPage + 1 > 1 ? "/page/" + (currentPage + 1) : "/";
+<% if (is_home()) {
+    var currentPage = page.current;
+    var totalPage = page.total;
+    var sep = 4 - (totalPage - currentPage) > 0 ? 4 - (totalPage - currentPage) : 0;
+    var startPage = currentPage - 5 - sep > 1 ? currentPage - 5 - sep : 1;
+    var endPage = startPage + 9 < totalPage ? startPage + 9 : totalPage;
+    var prevLink = currentPage - 1 > 1 ? "/page/" + (currentPage - 1) : "/";
+    var nextLink =  currentPage + 1 > 1 ? "/page/" + (currentPage + 1) : "/";
 %>
-<div class="pagenator">
+    <div class="pagenator">
     <!--- 上一页 --->
     <% if (currentPage == 0 || currentPage == 1) { %>
-        <a class="extend prev-none">上一页</a>
+        <a class="extend prev-none"><%= _p('posts.prev')%></a>
     <% } %>
     <% if (currentPage > 1) { %>
-        <a class="extend prev" href="<%=prevLink%>">上一页</a>
+        <a class="extend prev" href="<%=prevLink%>"><%= _p('posts.prev')%></a>
     <% } %>
 
     <!--- 中间页 --->
@@ -26,9 +27,24 @@ var nextLink =  currentPage + 1 > 1 ? "/page/" + (currentPage + 1) : "/";
     <% } %>
     <!--- 下一页 --->
     <% if (currentPage == totalPage) { %>
-        <a class="extend next-none">下一页</a>
+        <a class="extend next-none"><%= _p('posts.next')%></a>
     <% } %>
     <% if (currentPage < totalPage) { %>
-        <a class="extend next" href="<%=nextLink%>">下一页</a>
+        <a class="extend next" href="<%=nextLink%>"><%= _p('posts.next')%></a>
     <% } %>
 </div>
+<% } else if (is_post()) { %>
+    <div class="pagenator post-pagenator">
+    <!--- 上一篇 --->
+    <% if (page.prev) { %>
+        <a class="extend prev post-prev" href="<%=url_for(page.prev.path)%>"><%= _p('posts.prev_post')%></a>
+    <% } %>
+
+    <!--- 更新时间 --->
+    <p><%= _p('posts.last_update')%> <%= date(page.updated,"YYYY-MM-DD")%></p>
+    <!--- 下一篇 --->
+    <% if (page.next) { %>
+        <a class="extend next post-next" href="<%=url_for(page.next.path)%>"><%= _p('posts.next_post')%></a>
+    <% } %>
+    </div>
+<% } %>
