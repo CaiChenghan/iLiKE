@@ -1,3 +1,3 @@
 # iLiKE
 hexo theme
-![Hexo](../source/image/Hexo.png)
+![Hexo](/source/image/Hexo.png)
