@@ -1,0 +1,15 @@
+menu:
+  home: Home
+  archives: Archives
+  tags: Tags
+  categories: Categories
+  about: About
+
+posts:
+  prev: prev
+  next: next
+  prev_post: prev
+  next_post: next
+  last_update: last update time
+  visits: '阅读次数'
+  reward: '赞赏支持'
