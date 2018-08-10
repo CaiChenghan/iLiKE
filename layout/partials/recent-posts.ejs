@@ -7,21 +7,17 @@ if (theme.auto_excerpt) {
   }
 }
 var pageNum = 10;
-if (config.index_generator.per_page) {
-  pageNum = config.index_generator.per_page;
-}
-var order = date;
-if (config.index_generator.order_by) {
-  order = config.index_generator.order_by;
+if (config.per_page && config.per_page > 0) {
+  pageNum = config.per_page;
 }
 %>
 <% if (page.posts.length > 0) { %>
   <div class="article">
-    <% page.posts.sort('order', -1).limit(pageNum).each(function(post) { %>
+    <% page.posts.sort('date', -1).limit(pageNum).each(function(post) { %>
       <div class="article-item">
         <h2 class="article-item-header">
           <a href="<%=config.root + post.path%>">
-            <%=post.title%>
+            <%=pageNum%>
           </a>
         </h2>
         <div class="article-item-content">
