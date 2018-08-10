@@ -9,8 +9,10 @@ if (theme.auto_excerpt) {
 var pageNum = 10;
 if (config.per_page && config.per_page > 0) {
   pageNum = config.per_page;
+  sonsole.log(pageNum);
 }
 %>
+<p><%= pageNum%></p>
 <% if (page.posts.length > 0) { %>
   <div class="article">
     <% page.posts.sort('date', -1).limit(pageNum).each(function(post) { %>

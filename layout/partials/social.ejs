@@ -2,9 +2,11 @@
 	<ul class="social-list">
 		<% Object.keys(theme.social).forEach(function(key) { %>
 			<% var value = theme.social[key]; if (value) { %>
+				<% var target = "_self"; if (key == "email") { value = "mailto:" + value; target = "_blank"; %>
+				<% } %>
 				<li>
-					<a href="<%= value%>" title="<%= key%>" target="_blank">
-						<i class="fa fa-<%= key%>"></i>
+					<a href="<%= value%>" title="<%= key%>" target="<%= target%>">
+					<i class="fa fa-<%= key%>"></i>
 					</a>
 				</li>
 			<% } %>
