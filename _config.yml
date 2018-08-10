@@ -10,14 +10,19 @@ menu:
 
 # Social
 social:
-  weibo: 
-  github: https://github.com/CaiChenghan
-  stack_overflow:
-  facebook:
-  twitter: 
-  google_plus: 
-  instagram: 
   email: 
+  stack-overflow:
+  twitter:
+  facebook:
+  linkedin:
+  google:
+  github: https://github.com/CaiChenghan
+  weibo:
+  zhihu:
+  douban:
+  pocket:
+  tumblr:
+  instagram:
 
 # Miscelaneous
 favicon: /favicon.ico

@@ -1,20 +1,13 @@
 <div class="social">
 	<ul class="social-list">
-		<!--Weibo-->
-		<% if (theme.social.weibo) { %>
-			<li>
-				<a href="<%= theme.social.weibo%>" title="我的微博" target="_blank">
-				<i class="fa fa-weibo"></i>
-			</a>
-			</li>
-		<% } %>
-		<!--Github-->
-		<% if (theme.social.github) { %>
-			<li>
-				<a href="<%= theme.social.github%>" title="Github" target="_blank">
-				<i class="fa fa-github"></i>
-			</a>
-			</li>
-		<% } %>
+		<% Object.keys(theme.social).forEach(function(key) { %>
+			<% var value = theme.social[key]; if (value) { %>
+				<li>
+					<a href="<%= value%>" title="<%= key%>" target="_blank">
+						<i class="fa fa-<%= key%>"></i>
+					</a>
+				</li>
+			<% } %>
+		<% }); %>
 	</ul>
 </div>
