@@ -7,8 +7,9 @@ if (theme.auto_excerpt) {
   }
 }
 var pageNum = 10;
-if (config.per_page && config.per_page > 0) {
+if (config.per_page) {
   pageNum = config.per_page;
+  pageNum = pageNum >= 1 ? pageNum : 1;
 }
 %>
 <% if (page.posts.length > 0) { %>
