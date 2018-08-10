@@ -1,0 +1,15 @@
+menu:
+  home: トップページ
+  archives: ポスト
+  tags: ラベル
+  categories: 分類する
+  about: について
+
+posts:
+  prev: 前のページ
+  next: 次のページ
+  prev_post: 前の章
+  next_post: 次の章
+  last_update: 前回の更新
+  visits: 読解の回数
+  reward: 支持を賞賛する

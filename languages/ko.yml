@@ -1,0 +1,15 @@
+menu:
+  home: 페이지
+  archives: 압축 파일
+  tags: 라벨
+  categories: 분류
+  about: 에 관하다
+
+posts:
+  prev: 페이지
+  next: 다음 페이지
+  prev_post: 이전
+  next_post: 다음 편
+  last_update: 업데이트
+  visits: 읽은 횟수
+  reward: 지지를 칭찬하다.

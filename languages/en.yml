@@ -11,5 +11,5 @@ posts:
   prev_post: prev
   next_post: next
   last_update: last update time
-  visits: '阅读次数'
-  reward: '赞赏支持'
+  visits: visits
+  reward: reward
