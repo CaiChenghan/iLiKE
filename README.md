@@ -7,7 +7,7 @@ A super simple theme for Hexo
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/CaiChenghan/iLiKE/master/LICENSE)
 
 ## Demo
-[在线预览 Demo](http://CaiChenghan.github.io/)
+[在线预览](http://CaiChenghan.github.io/)
 
 ## Feature
 - 自定义样式
