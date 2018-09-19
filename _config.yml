@@ -43,3 +43,13 @@ since: 2017
 auto_excerpt:
   enable: true
   length: 150
+
+
+# ===========================================
+# Third Party Services Settings
+# ===========================================
+
+# LeanCloud
+leancloud:
+  app_id: 6E5zTbTljdUbVW2WkXPsXGJk-gzGzoHsz
+  app_key: 0vsyDKfNpeSECAI70J794ugv
