@@ -4,8 +4,8 @@
     var sep = 4 - (totalPage - currentPage) > 0 ? 4 - (totalPage - currentPage) : 0;
     var startPage = currentPage - 5 - sep > 1 ? currentPage - 5 - sep : 1;
     var endPage = startPage + 9 < totalPage ? startPage + 9 : totalPage;
-    var prevLink = currentPage - 1 > 1 ? "/page/" + (currentPage - 1) : "/";
-    var nextLink =  currentPage + 1 > 1 ? "/page/" + (currentPage + 1) : "/";
+    var prevLink = currentPage - 1 > 1 ? "page/" + (currentPage - 1) : "/";
+    var nextLink =  currentPage + 1 > 1 ? "page/" + (currentPage + 1) : "/";
 %>
     <div class="pagenator">
     <% if (currentPage == 0 || currentPage == 1) { %>
@@ -19,7 +19,7 @@
         <% if (i == currentPage) { %>
             <span class="extend page-item page-item-select"><%=i%></span>
         <% } %>
-        <% if (i != currentPage) { var pageUrl = (i > 1 ? "/page/" + i : "/") %>
+        <% if (i != currentPage) { var pageUrl = (i > 1 ? "page/" + i : "/") %>
             <a class="extend page-item page-item-normal" href="<%=pageUrl%>"><%=i%></a>
         <% } %>
     <% } %>
