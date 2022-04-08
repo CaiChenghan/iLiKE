@@ -6,12 +6,10 @@ A super simple theme for Hexo
 [![GitHub issues](https://img.shields.io/github/issues/CaiChenghan/iLiKE.svg)](https://github.com/CaiChenghan/iLiKE/issues)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/CaiChenghan/iLiKE/master/LICENSE)
 
-## Demo
-[在线预览](http://CaiChenghan.github.io/)
 
 ## Feature
-- 自定义样式
-- 版权信息，自定义许可协议
+- Mohan
+- babu
 
 ## Screenshots
 ![iLiKE-screenshots](/source/image/Hexo.png)
